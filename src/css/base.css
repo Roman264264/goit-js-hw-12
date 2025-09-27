@@ -111,7 +111,7 @@ main:has(.back-link) {
   background-color: #3b5ce0;
 }
 
-/* Галерея */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -141,7 +141,6 @@ main:has(.back-link) {
   display: block;
 }
 
-/* Інфо-блок під картинкою */
 .info {
   display: flex;
   justify-content: space-around;
@@ -162,7 +161,6 @@ main:has(.back-link) {
   color: #2e2f42;
 }
 
-/* Loader */
 .loader {
   display: none;
   margin: 20px auto;
@@ -184,3 +182,29 @@ main:has(.back-link) {
 }
 
 
+.load-more {
+  display: none; 
+  margin: 20px auto;
+  padding: 12px 32px;
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.load-more:hover {
+  background-color: #3b5ce0;
+  transform: translateY(-2px);
+}
+
+.load-more:active {
+  transform: translateY(0);
+}
+
+.load-more.is-visible {
+  display: block;
+}
