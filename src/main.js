@@ -97,18 +97,18 @@ loadMoreBtn.addEventListener('click', async () => {
     }
 
       const alreadyLoaded = page * PER_PAGE;
-      if (alreadyLoaded >= (data.totalHits || 0)) {
+    if (alreadyLoaded >= (data.totalHits || 0)) {
         hideLoadMoreButton();
         iziToast.info({
-          title: 'End',
-          message: "We're sorry, but you've reached the end of search results.",
+        title: 'End',
+        message: "We're sorry, but you've reached the end of search results.",
         });
-      } else {
+    } else {
         showLoadMoreButton();
-      }
-    } catch (error) {
-      hideLoader();
-      iziToast.error({ title: 'Error', message: 'Failed to load more images.' });
-      console.error('Load more error:', error);
     }
-  });
+    } catch (error) {
+    hideLoader();
+    iziToast.error({ title: 'Error', message: 'Failed to load more images.' });
+    console.error('Load more error:', error);
+    }
+});
